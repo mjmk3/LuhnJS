@@ -1,0 +1,13 @@
+<form>
+  <input type="text" [(ngModel)]="cardNumber" placeholder="Card Number" />
+  <button (click)="validate()" type="button">Validate</button>
+</form>
+<div *ngIf="isValid">
+  Card is valid.
+</div>
+<div *ngIf="!isValid">
+  Card is invalid.
+</div>
+<div *ngIf="cardBrand">
+  Card brand: {{ cardBrand }}
+</div>
